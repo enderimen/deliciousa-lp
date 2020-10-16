@@ -12,5 +12,26 @@
 
 .m-row {
   width: 100%;
-  @include flex-display(flex, center, space-beetwen);
+  @include flex-display(flex, center, space-between);
+}
+
+.o-header {
+  padding-top: 20px;
+  height: 155px;
+}
+
+.m-navigation {
+
+  &List {
+    @include flex-display(flex, center, space-between);
+  }
+
+  &Item {
+    margin-left: 45px;
+    font-weight: 500;
+
+    & a.-active {
+      color: var(--active-color);
+    }
+  }
 }
