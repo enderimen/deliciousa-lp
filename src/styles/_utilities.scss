@@ -1,0 +1,17 @@
+.-animation {
+  animation: up-down 2s infinite alternate-reverse;
+}
+
+@keyframes up-down {
+  to {
+    top: 0;
+  }
+
+  from {
+    top: 30px;
+  }
+
+  to {
+    top: 0;
+  }
+}

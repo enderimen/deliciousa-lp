@@ -1,0 +1,14 @@
+.a-purchaseBtn {
+  padding: 15px 25px;
+  background-color: var(--btn-color);
+  color: var(--white-color);
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 500;
+  @include transition-out();
+
+  &:hover {
+    @include transition-in();
+    background-color: var(--black-color);
+  }
+}
