@@ -30,8 +30,17 @@
     margin-left: 45px;
     font-weight: 500;
 
-    & a.-active {
-      color: var(--active-color);
+    & a {
+      @include transition-out();
+
+      &.-active {
+        color: var(--active-color);
+      }
+
+      &:hover {
+        @include transition-in();
+        color: var(--active-color);
+      }
     }
   }
 }
