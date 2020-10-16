@@ -1,7 +1,10 @@
 @import "./../variables/initial";
-@import "./reset.scss";
 @import "./../mixins/initial";
+@import "./../components/initial";
+@import "./utilities";
+@import "./reset.scss";
 
+// Utilities
 .m-container {
   margin-left: auto;
   margin-right: auto;
@@ -15,9 +18,14 @@
   @include flex-display(flex, center, space-between);
 }
 
+// Header
 .o-header {
-  padding-top: 20px;
+  position: absolute;
+  z-index: 2;
   height: 155px;
+  width: 1200px;
+  left: 50%;
+  transform: translate(-50%, 20px);
 }
 
 .m-navigation {
@@ -44,3 +52,39 @@
     }
   }
 }
+
+// Showcase
+
+.o-showcase {
+  position: relative;
+  background-image: url("./../assets/img/hero.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  .m-content {
+    text-align: right;
+    @include flex-display(flex, flex-end, center, column);
+  }
+
+  &__title {
+    font-family: $second-font;
+    font-weight: 700;
+    font-size: 60px;
+    margin-top: $xxl;
+
+    & span {
+      color: var(--active-color);
+    }
+  }
+
+  &__desc {
+    margin-top: $xxl;
+    margin-bottom: $large;
+    font-family: $first-font;
+    font-weight: 100;
+    line-height: 32px;
+    width: 470px;
+  }
+}
+
