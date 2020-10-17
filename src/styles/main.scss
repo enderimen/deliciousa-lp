@@ -15,7 +15,7 @@
 
 .m-row {
   width: 100%;
-  @include flex-display(flex, center, space-between);
+  @include flex-display(flex, center, space-between, row wrap);
 }
 
 // Header
@@ -88,3 +88,53 @@
   }
 }
 
+// Demos
+
+.o-demo {
+  text-align: center;
+  @include flex-display(flex, center, center, column);
+
+  background-image: url("./../assets/img/demo-bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 50% 4%;
+
+  &__title {
+    font-family: $second-font;
+    font-size: 60px;
+    margin-bottom: $xxl;
+
+    & span {
+      color: var(--active-color);
+    }
+  }
+
+  &__detail {
+    max-width: 450px;
+    margin-bottom: $xlarge;
+    font-weight: 300;
+  }
+
+  &Item {
+    margin-left: $xxl;
+    margin-right: $xxl;
+    padding-bottom: $xxl;
+    text-align: center;
+    @include transition-out();
+
+    &:hover {
+      padding-bottom: $lg;
+      @include transition-in();
+    }
+
+    & .-group {
+      position: relative;
+    }
+  }
+
+  &__desc {
+    margin-top: $xxl;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}

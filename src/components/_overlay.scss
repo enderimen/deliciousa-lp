@@ -1,0 +1,58 @@
+.a-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  cursor: pointer;
+  opacity: 0;
+  @include flex-display(flex, center, center);
+  @include transition-out();
+
+  & a {
+    position: relative;
+    padding: 15px 20px;
+    overflow: hidden;
+    height: 50px;
+    width: 150px;
+    background-color: var(--white-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include transition-out();
+
+    &:hover {
+      @include transition-in();
+      padding-left: 90px;
+    }
+
+    &:hover::before {
+      width: 50%;
+      left: 0;
+      @include transition-out();
+    }
+
+    &::before {
+      position: absolute;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      content: attr(data-title);
+      height: 100%;
+      width: 0;
+      left: -90%;
+      z-index: 3;
+      top: 0;
+      color: var(--white-color);
+      background-color: var(--active-color);
+      @include transition-out();
+    }
+  }
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(#000, .8);
+    @include transition-in();
+  }
+}
