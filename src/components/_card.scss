@@ -1,0 +1,22 @@
+.m-card {
+  margin-left: $xxl;
+  margin-right: $xxl;
+  padding-bottom: $xxl;
+  text-align: center;
+  @include transition-out();
+
+  &:hover {
+    padding-bottom: $lg;
+    @include transition-in();
+  }
+
+  & .-group {
+    position: relative;
+  }
+
+  &__desc {
+    margin-top: $xxl;
+    font-size: 18px;
+    font-weight: 500;
+  }
+}
