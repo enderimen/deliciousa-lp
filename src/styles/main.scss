@@ -98,12 +98,6 @@
       color: var(--active-color);
     }
   }
-
-  &__detail {
-    max-width: 450px;
-    margin-bottom: $xlarge;
-    font-weight: 300;
-  }
 }
 
 // Rich
@@ -112,4 +106,12 @@
   background-color: var(--black-color);
 }
 
-//
+// Recipe
+
+.o-recipe {
+  padding-bottom: $xlarge;
+  .swiper-slide {
+    margin-right: 0 !important;
+    width: 430px !important;
+  }
+}

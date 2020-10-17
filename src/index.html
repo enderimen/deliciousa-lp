@@ -6,6 +6,9 @@
     <link rel="shortcut icon" href="./assets/img/favicon.ico">
     <link rel="stylesheet" href="/styles/main.scss">
     <title>Deliciousa Frontend</title>
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/css/swiper.css">
 </head>
 <body>
 <!-- Header start -->
@@ -17,13 +20,13 @@
             <nav class="m-navigation">
                 <ul class="m-navigationList">
                     <li class="m-navigationItem">
-                        <a href="#" class="-active">Home</a>
+                        <a href="#home" class="-active">Home</a>
                     </li>
                     <li class="m-navigationItem">
                         <a href="#demos">Demos</a>
                     </li>
                     <li class="m-navigationItem">
-                        <a href="#">Reciepe Layouts</a>
+                        <a href="#recipe">Reciepe Layouts</a>
                     </li>
                     <li class="m-navigationItem">
                         <a href="#">Reservations</a>
@@ -58,7 +61,7 @@
     <!-- Demos start -->
     <section class="o-demo" id="demos">
         <h1 class="a-sectionTitle">Check Out Our <br> All <span>Ready Demos</span></h1>
-        <p class="o-demo__detail">We created many home pages with a special taste and delicious
+        <p class="a-sectionDetail">We created many home pages with a special taste and delicious
             thought, in order to choose one of them and execute it in just
             a few minutes.
         </p>
@@ -244,7 +247,107 @@
             </ul>
         </div>
     </section>
+
+    <!-- Recipe start -->
+    <section class="o-recipe" id="recipe">
+        <h1 class="a-sectionTitle">Check Out Our <br> All <span>Ready Demos</span></h1>
+        <p class="a-sectionDetail">We created many home pages with a special taste and delicious
+            thought, in order to choose one of them and execute it in just
+            a few minutes.
+        </p>
+
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="m-card">
+                        <div class="-group">
+                            <div class="a-overlay"><a href="#" data-title="View">Demo</a></div>
+                            <img src="./assets/img/recipe-1.jpg" alt="Demo 1" class=m-cardo__img">
+                        </div>
+                        <h3 class="m-card__desc">Default</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="m-card">
+                        <div class="-group">
+                            <div class="a-overlay"><a href="#" data-title="View">Demo</a></div>
+                            <img src="./assets/img/recipe-2.jpg" alt="Demo 1" class=m-cardo__img">
+                        </div>
+                        <h3 class="m-card__desc">Default</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="m-card">
+                        <div class="-group">
+                            <div class="a-overlay"><a href="#" data-title="View">Demo</a></div>
+                            <img src="./assets/img/recipe-3.jpg" alt="Demo 1" class=m-cardo__img">
+                        </div>
+                        <h3 class="m-card__desc">Default</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="m-card">
+                        <div class="-group">
+                            <div class="a-overlay"><a href="#" data-title="View">Demo</a></div>
+                            <img src="./assets/img/recipe-4.jpg" alt="Demo 1" class=m-cardo__img">
+                        </div>
+                        <h3 class="m-card__desc">Default</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="m-card">
+                        <div class="-group">
+                            <div class="a-overlay"><a href="#" data-title="View">Demo</a></div>
+                            <img src="./assets/img/recipe-5.jpg" alt="Demo 1" class=m-cardo__img">
+                        </div>
+                        <h3 class="m-card__desc">Default</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="m-card">
+                        <div class="-group">
+                            <div class="a-overlay"><a href="#" data-title="View">Demo</a></div>
+                            <img src="./assets/img/recipe-6.jpg" alt="Demo 1" class=m-cardo__img">
+                        </div>
+                        <h3 class="m-card__desc">Default</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="m-card">
+                        <div class="-group">
+                            <div class="a-overlay"><a href="#" data-title="View">Demo</a></div>
+                            <img src="./assets/img/recipe-7.jpg" alt="Demo 1" class=m-cardo__img">
+                        </div>
+                        <h3 class="m-card__desc">Default</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="m-card">
+                        <div class="-group">
+                            <div class="a-overlay"><a href="#" data-title="View">Demo</a></div>
+                            <img src="./assets/img/recipe-8.jpg" alt="Demo 1" class=m-cardo__img">
+                        </div>
+                        <h3 class="m-card__desc">Default</h3>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="m-card">
+                        <div class="-group">
+                            <div class="a-overlay"><a href="#" data-title="View">Demo</a></div>
+                            <img src="./assets/img/recipe-9.jpg" alt="Demo 1" class=m-cardo__img">
+                        </div>
+                        <h3 class="m-card__desc">Default</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
+
+<!-- Swiper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.min.js"></script>
+
+<!-- Custom JS -->
 <script src="./index.js"></script>
 </body>
 </html>
