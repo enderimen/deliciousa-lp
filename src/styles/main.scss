@@ -64,18 +64,8 @@
 
   .m-content {
     text-align: right;
-    @include flex-display(flex, flex-end, center, column);
-  }
-
-  &__title {
-    font-family: $second-font;
-    font-weight: 700;
-    font-size: 60px;
-    margin-top: $xxl;
-
-    & span {
-      color: var(--active-color);
-    }
+    padding-top: 200px;
+    @include flex-display(flex, flex-end, flex-end, column);
   }
 
   &__desc {
@@ -114,27 +104,12 @@
     margin-bottom: $xlarge;
     font-weight: 300;
   }
-
-  &Item {
-    margin-left: $xxl;
-    margin-right: $xxl;
-    padding-bottom: $xxl;
-    text-align: center;
-    @include transition-out();
-
-    &:hover {
-      padding-bottom: $lg;
-      @include transition-in();
-    }
-
-    & .-group {
-      position: relative;
-    }
-  }
-
-  &__desc {
-    margin-top: $xxl;
-    font-size: 18px;
-    font-weight: 500;
-  }
 }
+
+// Rich
+
+.o-rich {
+  background-color: var(--black-color);
+}
+
+//

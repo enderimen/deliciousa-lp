@@ -15,3 +15,23 @@
     top: 0;
   }
 }
+
+.-textRight {
+  text-align: right;
+}
+
+.-textLeft {
+  text-align: left;
+}
+
+.-textCenter {
+  text-align: center;
+}
+
+.-whiteText {
+  color: var(--white-color);
+}
+
+.-flexNoWrap {
+  flex-flow: row nowrap !important;
+}
