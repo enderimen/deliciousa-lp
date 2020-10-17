@@ -1,0 +1,12 @@
+.a-sectionTitle {
+  text-align: center;
+  font-family: $second-font;
+  font-weight: 700;
+  font-size: 60px;
+  margin-top: $xxl;
+  margin-bottom: $large;
+
+  & span {
+    color: var(--active-color);
+  }
+}
