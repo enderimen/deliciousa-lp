@@ -55,6 +55,8 @@
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+.icon-play:before { content: '\25b6'; } /* '▶' */
+.icon-cancel:before { content: '\2715'; } /* '✕' */
 .icon-window:before { content: '\e74e'; } /* '' */
 .icon-up-open-big:before { content: '\e767'; } /* '' */
 .icon-tasks:before { content: '\f0ae'; } /* '' */

@@ -6,6 +6,10 @@
 <font id="fontello" horiz-adv-x="1000" >
 <font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
 <missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="play" unicode="&#x25b6;" d="M772 333l-741-412q-13-7-22-2t-9 20v822q0 14 9 20t22-2l741-412q13-7 13-17t-13-17z" horiz-adv-x="785.7" />
+
+<glyph glyph-name="cancel" unicode="&#x2715;" d="M654 349l346-346-154-154-346 346-346-346-154 154 346 346-346 346 154 154 346-346 346 346 154-154z" horiz-adv-x="1000" />
+
 <glyph glyph-name="window" unicode="&#xe74e;" d="M900 750q42 0 71-30t29-70l0-600q0-42-29-71t-71-29l-800 0q-40 0-70 29t-30 71l0 600q0 40 30 70t70 30l800 0z m-670-94q-16 0-27-11t-11-25q0-16 11-27t27-11q38 0 38 38 0 16-11 26t-27 10z m-138-36q0-16 11-27t27-11q38 0 38 38 0 16-11 26t-27 10-27-11-11-25z m810-570l0 460-802 0 0-460 802 0z m0 540l0 60-602 0 0-60 602 0z" horiz-adv-x="1000" />
 
 <glyph glyph-name="up-open-big" unicode="&#xe767;" d="M804 130l-372 358-370-358q-26-22-50 0-24 24 0 50l396 390q26 26 48 0l396-390q24-26 0-50-26-22-48 0z" horiz-adv-x="864" />
