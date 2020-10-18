@@ -115,3 +115,90 @@
     width: 430px !important;
   }
 }
+
+// Reservation
+
+.o-reservation {
+  position: relative;
+  height: 100%;
+  margin-top: 40px;
+}
+
+.m-reservation {
+  &Info {
+    flex: 1 0 50%;
+    @include flex-display(flex, flex-start, center, column nowrap);
+  }
+
+  &List {
+    @include flex-display(flex, center, flex-start, row wrap);
+    margin-top: $xxl;
+
+    & a.a-btn {
+      margin: 5px;
+      flex: 0 0 45%;
+    }
+  }
+}
+
+.a-video {
+  flex: calc(50% - 30px);
+  margin-left: $xxl;
+  position: relative;
+
+  & .-videoCover {
+    object-fit: cover;
+    width: 100%;
+    box-shadow: -10px 10px 30px lightgray;
+  }
+
+  & .-play{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: rgba(#000, .7);
+    border: 5px solid gray;
+    border-radius: 50%;
+    font-size: 20px;
+  }
+}
+
+.a-videoOverlay {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 3;
+  visibility: hidden;
+  background-color: rgba(#000, .8);
+
+  @include flex-display(flex, center, flex-start, column nowrap);
+
+  & > label.-closeBtn {
+    display: block;
+    margin-top: 40px;
+    margin-right: $large;
+    font-size: 30px;
+    cursor: pointer;
+    align-self: flex-end;
+  }
+
+  & video {
+    margin-top: 100px;
+    max-width: 800px;
+    object-fit: cover;
+  }
+}
+
+.-playBtn {
+  display: none;
+
+  &:checked + .a-videoOverlay {
+    visibility: visible;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+}

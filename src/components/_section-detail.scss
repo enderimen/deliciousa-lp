@@ -5,4 +5,8 @@
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+
+  &.-noMargin {
+    margin: 0;
+  }
 }

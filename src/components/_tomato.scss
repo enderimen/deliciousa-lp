@@ -1,5 +1,13 @@
 .a-tomato {
   position: absolute;
-  left: 0;
-  top: 10px;
+
+  &.-leftTop {
+    left: 0;
+    top: 10px;
+  }
+
+  &.-bottomRight {
+    right: 0;
+    bottom: -200px;
+  }
 }

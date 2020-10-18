@@ -4,15 +4,15 @@
 
 @keyframes up-down {
   to {
-    top: 0;
+    transform: translateY(0);
   }
 
   from {
-    top: 30px;
+    transform: translateY(30px);
   }
 
   to {
-    top: 0;
+    transform: translateY(0);
   }
 }
 

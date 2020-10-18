@@ -1,4 +1,4 @@
-.a-purchaseBtn {
+.a-btn {
   padding: 15px 25px;
   background-color: var(--btn-color);
   color: var(--white-color);
@@ -6,6 +6,12 @@
   font-size: 14px;
   font-weight: 500;
   @include transition-out();
+
+  &.-resarvation {
+    border-radius: 0;
+    background-color: var(--black-color);
+    color: var(--white-color);
+  }
 
   &:hover {
     @include transition-in();
