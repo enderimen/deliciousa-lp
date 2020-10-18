@@ -24,9 +24,35 @@
   position: absolute;
   z-index: 2;
   height: 155px;
-  width: 1200px;
+  width: 100%;
   left: 50%;
-  transform: translate(-50%, 20px);
+  transform: translateX(-50%);
+  padding-top: $lg;
+
+  &.-fixed {
+    position: fixed;
+    background-color: var(--white-color);
+    height: 90px;
+    padding-top: $sm;
+    padding-bottom: $sm;
+    box-shadow: 0 $sm $xxl rgba(0, 0, 0, 0.2);
+    z-index: 3;
+
+    .o-header__logo {
+      max-height: 70px;
+      max-width: 85px;
+    }
+
+    .m-navigationItem {
+      & a:hover {
+        color: var(--active-color);
+      }
+
+      & a.-active:hover {
+        color: var(--white-color);
+      }
+    }
+  }
 }
 
 .m-navigation {
@@ -40,14 +66,23 @@
     font-weight: 500;
 
     & a {
-      @include transition-out();
+      position: relative;
+      transition: all .3s;
 
       &.-active {
-        color: var(--active-color);
+        padding: 10px 30px;
+        background-color: var(--btn-color);
+        color: var(--white-color);
+        border-radius: 30px;
+        font-size: 14px;
+
+        &:hover {
+          color: var(--white-color);
+        }
       }
 
       &:hover {
-        @include transition-in();
+        transition: all .3s;
         color: var(--active-color);
       }
     }
@@ -62,6 +97,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
+  padding-top: $xxl;
 
   .m-content {
     text-align: right;
@@ -171,9 +207,10 @@
   position: absolute;
   height: 100vh;
   width: 100%;
-  z-index: 3;
+  z-index: 11;
   visibility: hidden;
   background-color: rgba(#000, .8);
+  backdrop-filter: blur(6px);
 
   @include flex-display(flex, center, flex-start, column nowrap);
 
