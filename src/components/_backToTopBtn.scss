@@ -1,0 +1,22 @@
+// Back To Top Button
+
+.m-backToTopBtn {
+  position: fixed;
+  z-index: 10;
+  right: 50px;
+  bottom: 50px;
+  height: 60px;
+  width: 60px;
+  outline: none;
+  background-color: var(--active-color);
+  border-radius: 50%;
+  color: var(--white-color);
+  font-size: 18px;
+  opacity: 0;
+  transition: opacity ease-out .3s;
+
+  &.-show {
+    opacity: 1;
+    transition: opacity ease-in .3s;
+  }
+}
