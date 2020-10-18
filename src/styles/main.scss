@@ -11,6 +11,7 @@
   padding-left: 15px;
   padding-right: 15px;
   max-width: 1200px;
+  width: 100%;
 }
 
 .m-row {
@@ -239,3 +240,68 @@
     font-size: 14px;
   }
 }
+
+// Counter start
+
+.o-counter {
+  background-color: var(--black-color);
+  color: var(--white-color);
+  @include flex-display(flex, center, center);
+
+  .m-counter {
+    &List {
+      margin-top: $xxl;
+      @include flex-display(flex, center, space-between);
+    }
+
+    &Item {
+      @include flex-display(flex, center, center, column nowrap);
+    }
+
+    &__number {
+      font-family: $second-font;
+      font-weight: 700;
+      font-size: 54px;
+    }
+
+    &__title {
+      margin-top: $xxl;
+      font-family: $first-font;
+      font-weight: 500;
+      color: var(--counter-color);
+    }
+
+    &__img {
+      margin-top: $xlarge;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
