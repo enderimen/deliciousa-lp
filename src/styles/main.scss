@@ -202,3 +202,40 @@
     top: 0;
   }
 }
+
+// Reservation Extras
+
+.o-extraFeature {
+
+  &List {
+    display: flex;
+    margin-top: $xlarge;
+  }
+
+  &__item {
+    flex: 1;
+    padding: 40px $xxl;
+
+    &:nth-child(2n + 1) {
+      background-color: var(--extra-light-bg);
+    }
+
+    &:nth-child(2n) {
+      background-color: var(--extra-dark-bg);
+    }
+  }
+
+  &__title {
+    margin-top: $lg;
+    font-family: $second-font;
+    font-size: 21px;
+    font-weight: 700;
+  }
+
+  &__desc {
+    margin-top: $lg;
+    font-family: $first-font;
+    font-weight: 300;
+    font-size: 14px;
+  }
+}

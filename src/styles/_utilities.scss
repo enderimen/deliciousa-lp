@@ -32,6 +32,20 @@
   color: var(--white-color);
 }
 
+.-redText {
+  color: var(--active-color);
+}
+
 .-flexNoWrap {
   flex-flow: row nowrap !important;
+}
+
+.-fa {
+  &-2x {
+    font-size: 2em;
+  }
+
+  &-3x {
+    font-size: 3em;
+  }
 }
