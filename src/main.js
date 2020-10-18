@@ -18,14 +18,13 @@ export default () => {
 
     const backToTopBtn = document.querySelector("#backToTopBtn");
     const THRESHOLD_SCROLL_VALUE = 100;
-    let currentScrollPosition;
 
     window.onscroll = () => {
         scrollToTop();
     }
 
     const scrollToTop = () => {
-        currentScrollPosition = document.documentElement.scrollTop;
+        const currentScrollPosition = document.documentElement.scrollTop;
 
         if(backToTopBtn && currentScrollPosition > THRESHOLD_SCROLL_VALUE) {
             backToTopBtn.classList.add("-show");
@@ -35,6 +34,6 @@ export default () => {
     }
 
     backToTopBtn.addEventListener('click',() => {
-        currentScrollPosition = 0;
+        document.documentElement.scrollTop = 0;
     });
 };
