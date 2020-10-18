@@ -241,7 +241,7 @@
   }
 }
 
-// Counter start
+// Counter
 
 .o-counter {
   background-color: var(--black-color);
@@ -277,7 +277,39 @@
   }
 }
 
+// Feature
 
+.o-feature {
+  padding-bottom: 100px;
+
+  .m-feature {
+    &List {
+      @include flex-display(flex, center, flex-start, row wrap);
+    }
+
+    &Item {
+      @include flex-display(flex, center, center, column nowrap);
+      border: 1px solid var(--feature-border-color);
+      padding: $lg 25px;
+      margin-bottom: $xxl;
+      margin-right: 10px;
+      margin-left: 10px;
+      flex: 0 0 23%;
+      cursor: pointer;
+      @include transition-out();
+
+      &:hover {
+        @include transition-in();
+        box-shadow: 0 $sm $xxl rgba(0, 0, 0, 0.1);
+      }
+    }
+
+    &__title {
+      margin-top: $sm;
+      font-weight: 500;
+    }
+  }
+}
 
 
 
