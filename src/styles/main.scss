@@ -17,6 +17,10 @@
 .m-row {
   width: 100%;
   @include flex-display(flex, center, space-between, row wrap);
+
+  &.-flexJustify {
+    justify-content: flex-start;
+  }
 }
 
 // Header
@@ -187,6 +191,7 @@
     object-fit: cover;
     width: 100%;
     box-shadow: -10px 10px 30px lightgray;
+    cursor: pointer;
   }
 
   & .-play{
@@ -288,7 +293,7 @@
   .m-counter {
     &List {
       margin-top: $xxl;
-      @include flex-display(flex, center, space-between);
+      @include flex-display(flex, center, space-around);
     }
 
     &Item {
