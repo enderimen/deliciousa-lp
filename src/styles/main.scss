@@ -12,14 +12,23 @@
   padding-right: 15px;
   max-width: 1200px;
   width: 100%;
+
+  @include tablet() {
+    max-width: 720px;
+  }
 }
 
 .m-row {
+  position: relative;
   width: 100%;
   @include flex-display(flex, center, space-between, row wrap);
 
   &.-flexJustify {
     justify-content: flex-start;
+
+    @include mobile() {
+      justify-content: center;
+    }
   }
 }
 
@@ -32,6 +41,41 @@
   left: 50%;
   transform: translateX(-50%);
   padding-top: $lg;
+
+  @include mobile() {
+    height: 90px;
+    background-color: var(--white-color);
+    box-shadow: 0 $sm $xxl rgba(0, 0, 0, 0.2);
+    padding-top: $sm;
+  }
+
+  &__logo {
+    @include mobile() {
+      width: 80px;
+      height: 70px;
+    }
+
+    @include tablet() {
+      width: 80px;
+      height: 70px;
+    }
+  }
+
+  &__menuBtn {
+    display: none;
+
+    @include mobile() {
+      display: block;
+    }
+
+    & i {
+      font-size: $xxl;
+
+      &.icon-cancel:before {
+        content: '\2715' !important;
+      }
+    }
+  }
 
   &.-fixed {
     position: fixed;
@@ -54,6 +98,10 @@
 
       & a.-active:hover {
         color: var(--white-color);
+
+        @include mobile() {
+          color: var(--active-color)
+        }
       }
     }
   }
@@ -61,13 +109,45 @@
 
 .m-navigation {
 
+  @include mobile() {
+    width: 100%;
+    background-color: var(--white-color);
+    position: fixed;
+    top: 89px;
+    transform: translateX(100%);
+    transition: all .3s;
+
+    &.-openMenu {
+      transform: translateX(-15px);
+    }
+  }
+
   &List {
     @include flex-display(flex, center, space-between);
+
+    @include mobile() {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: $lg;
+    }
   }
 
   &Item {
     margin-left: 45px;
     font-weight: 500;
+
+    @include mobile() {
+      margin-left: 0;
+      padding-top: $sm;
+      padding-bottom: $sm;
+      border-bottom: 1px solid var(--feature-border-color);
+      width: 100%;
+      font-weight: 500;
+
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
 
     & a {
       position: relative;
@@ -80,8 +160,19 @@
         border-radius: 30px;
         font-size: 14px;
 
+        @include mobile() {
+          background-color: transparent;
+          border-radius: 0;
+          color: var(--active-color);
+          padding: 0;
+          font-size: inherit;
+        }
+
         &:hover {
           color: var(--white-color);
+          @include mobile() {
+            color: var(--active-color);
+          }
         }
       }
 
@@ -103,10 +194,23 @@
   height: 100vh;
   padding-top: $xxl;
 
+  @include mobile() {
+    background-position: 50% top;
+  }
+
+  @include tablet() {
+    background-position: 50% top;
+  }
+
   .m-content {
     text-align: right;
     padding-top: 200px;
     @include flex-display(flex, flex-end, flex-end, column);
+
+    @include mobile() {
+      padding-top: 90px;
+      align-items: center;
+    }
   }
 
   &__desc {
@@ -116,6 +220,11 @@
     font-weight: 100;
     line-height: 32px;
     width: 470px;
+
+    @include mobile() {
+      max-width: 300px;
+      text-align: center;
+    }
   }
 }
 
@@ -169,6 +278,9 @@
   &Info {
     flex: 1 0 50%;
     @include flex-display(flex, flex-start, center, column nowrap);
+    @include tablet() {
+      flex: 1 0 100%;
+    }
   }
 
   &List {
@@ -178,6 +290,10 @@
     & a.a-btn {
       margin: 5px;
       flex: 0 0 45%;
+
+      @include mobile() {
+        flex: 0 0 100%;
+      }
     }
   }
 }
@@ -186,6 +302,11 @@
   flex: calc(50% - 30px);
   margin-left: $xxl;
   position: relative;
+
+  @include mobile() {
+    margin-left: 0;
+    margin-top: $large;
+  }
 
   & .-videoCover {
     object-fit: cover;
@@ -232,6 +353,10 @@
     margin-top: 100px;
     max-width: 800px;
     object-fit: cover;
+
+    @include mobile() {
+      max-width: 90%;
+    }
   }
 }
 
@@ -253,11 +378,22 @@
   &List {
     display: flex;
     margin-top: $xlarge;
+
+    @include tablet() {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    @include mobile() {
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
   }
 
   &__item {
     flex: 1;
     padding: 40px $xxl;
+    width: 20%;
 
     &:nth-child(2n + 1) {
       background-color: var(--extra-light-bg);
@@ -265,6 +401,16 @@
 
     &:nth-child(2n) {
       background-color: var(--extra-dark-bg);
+    }
+
+    @include tablet() {
+      min-width: 33.3333%;
+      flex: 0;
+    }
+
+    @include mobile() {
+      min-width: 100%;
+      flex: 0;
     }
   }
 
@@ -294,6 +440,10 @@
     &List {
       margin-top: $xxl;
       @include flex-display(flex, center, space-around);
+
+      @include mobile() {
+        flex-flow: column nowrap;
+      }
     }
 
     &Item {
@@ -343,6 +493,16 @@
       &:hover {
         @include transition-in();
         box-shadow: 0 $sm $xxl rgba(0, 0, 0, 0.1);
+      }
+
+      @include tablet() {
+        width: calc(50% - 20px);
+        flex: none;
+      }
+
+      @include mobile() {
+        width: calc(100% - 20px);
+        flex: none;
       }
     }
 

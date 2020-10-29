@@ -38,6 +38,10 @@
 
 .-flexNoWrap {
   flex-flow: row nowrap !important;
+
+  @include mobile() {
+    flex-flow: row wrap !important;
+  }
 }
 
 .-fa {

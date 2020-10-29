@@ -11,4 +11,9 @@
     right: 0;
     bottom: 135px;
   }
+
+
+  @include mobile() {
+    display: none;
+  }
 }

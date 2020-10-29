@@ -1,23 +1,19 @@
 // break points
 
-$mobile-width: 768px;
-$tablet-width: 992px;
-$desktop-width: 1024px;
-
 @mixin desktop {
-  @media (min-width: $desktop-width) {
+  @media screen and(min-width: 992px) and (max-width: 1920px) {
     @content
   }
 }
 
 @mixin tablet {
-  @media (min-width: $tablet-width) {
+  @media screen and(min-width: 768px) and (max-width: 991px) {
     @content
   }
 }
 
 @mixin mobile {
-  @media (max-width: $mobile-width) {
+  @media screen and(max-width: 767px) {
     @content
   }
 }

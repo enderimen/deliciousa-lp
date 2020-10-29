@@ -3,6 +3,7 @@
   margin-right: $xxl;
   padding-bottom: $xxl;
   text-align: center;
+
   @include transition-out();
 
   &:hover {
@@ -18,5 +19,13 @@
     margin-top: $xxl;
     font-size: 18px;
     font-weight: 500;
+  }
+
+  @include tablet() {
+    max-width: 25%;
+
+    &.-fullWidth {
+      max-width: 100%;
+    }
   }
 }

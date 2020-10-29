@@ -67,6 +67,13 @@ export default () => {
         setActive(event.target);
     });
 
+    // Open mobile menu
 
+    const menuBtn = document.querySelector(".o-header__menuBtn");
+    const mobileNavigation = document.querySelector(".m-navigation");
 
+    menuBtn.addEventListener('click', () => {
+        mobileNavigation.classList.toggle("-openMenu");
+        menuBtn.firstElementChild.classList.toggle("icon-cancel");
+    });
 };

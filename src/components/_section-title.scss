@@ -9,4 +9,16 @@
   & span {
     color: var(--active-color);
   }
+
+  @include tablet() {
+    font-size: 38px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @include mobile() {
+    font-size: 28px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

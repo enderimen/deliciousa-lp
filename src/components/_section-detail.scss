@@ -9,4 +9,8 @@
   &.-noMargin {
     margin: 0;
   }
+
+  @include tablet() {
+    max-width: 100%;
+  }
 }
